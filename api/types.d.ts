@@ -1,15 +1,10 @@
-import {WebSocket} from 'ws'
+import {WebSocket} from 'ws';
+
 export interface ActiveConnections {
-  [id:string] : WebSocket | null
+  [id: string]: WebSocket;
 }
 
-export interface Coordinates {
-  x: number,
-  y: number,
-  clear: boolean,
-}
-
-export interface IncomingCoordinates {
-  type:string,
-  payload:Coordinates
+export interface IncomingMessage {
+  type: string;
+  payload: string;
 }
